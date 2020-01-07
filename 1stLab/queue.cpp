@@ -21,8 +21,8 @@ bool Queue :: isEmpty(){
 
 bool Queue :: isFull(){
     if(Rear >= MAX_QUEUE_SIZE-1){
-        return true;
         cout << "Queue is full" << endl;
+        return true;
     }
     else{
         return false;
@@ -52,6 +52,7 @@ int Queue :: dequeue(){
 int Queue :: front(){
     if(isEmpty()){
         cout << "no data in the queue." << endl ;
+        return 0;
     }
     else{
         return data[Front];
@@ -60,7 +61,8 @@ int Queue :: front(){
 
 int Queue :: rear(){
     if(isEmpty()){
-        cout << "no data in the queue." << endl ;
+        cout << "no data in the queue." << endl;
+        return 0;
     }
     else{
         return data[Rear];
@@ -75,10 +77,10 @@ int main(){
     q.enqueue(5);
     q.enqueue(8);
     q.enqueue(2);
-    cout << q.front();
-    cout << endl;
-    cout << q.rear();
+    q.front();
+    cout << "rear element: " <<q.rear();
     cout << endl;
     cout << "dequeued elements are: " << q.dequeue();
     cout << " " << q.dequeue();
+    cout << endl;
 }

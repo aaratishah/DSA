@@ -4,7 +4,7 @@
 #define MAX_QUEUE_SIZE 10
 class Queue{
     private:
-        char data[MAX_QUEUE_SIZE];
+        int data[MAX_QUEUE_SIZE];
         int Front;
         int Rear;
         int ele;
@@ -14,7 +14,7 @@ class Queue{
 
         bool isEmpty();
         bool isFull();
-        void enqueue(int data);
+        void enqueue(int ele);
         int dequeue();
         int front();
         int rear();
